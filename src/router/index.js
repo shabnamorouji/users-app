@@ -5,7 +5,7 @@ import Author from "../components/Author.vue";
 
 const routes = [
   {
-    path: "/",
+    path: "/users-app-live",
     name: "Users",
     component: UsersList,
   },

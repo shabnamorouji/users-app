@@ -1,10 +1,11 @@
 <template>
+  <loader v-show="loading" disableScrolling="false" object="#7764ce" color1="#09006a" color2="#1f34f5" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
   <div class="">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" to="/">Users</router-link>
+          <router-link class="nav-link" to="/users-app-live">Users</router-link>
         </li>
         <li class="nav-item">
           <router-link class="nav-link" to="/register">Register</router-link>
@@ -16,7 +17,7 @@
     </div>
   </nav>
   </div>
-  <router-view />
+  <router-view @loading="changeLoading" />
 
 
 </template>
@@ -26,6 +27,16 @@
 export default {
   name: 'App',
   components: {
+  },
+  methods: {
+    changeLoading(value) {
+      this.loading = value;
+    }
+  },
+  data: function() {
+    return {
+      loading: true
+    }
   }
 }
 </script>

@@ -56,6 +56,14 @@ export default {
       return { toast }
     },
 
+    beforeCreate() {
+        this.$emit("loading", true);
+    },
+
+    created() {
+        this.$emit("loading", false);
+    },
+
     data: function() {
         return {
             firstName: "",
@@ -78,6 +86,7 @@ export default {
         async onSubmit() {
             
             if (this.validate()) {
+                this.$emit("loading", true);
                 const user = this.createUser();
                 const usersResponse = await callPost(config.baseUrl + "/users", user);
                 if (usersResponse !== "error") {
@@ -86,6 +95,7 @@ export default {
                 });
                     this.clearForm();
                 }
+                this.$emit("loading", false);
             }
         },
         clearForm () {

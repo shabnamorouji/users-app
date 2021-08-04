@@ -15,6 +15,14 @@ import Header from "./Header.vue";
 
     components: {
         Header
+    },
+
+    beforeCreate() {
+        this.$emit("loading", true);
+    },
+
+    mounted() {
+        this.$emit("loading", false);
     }
 }
 

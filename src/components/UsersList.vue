@@ -40,11 +40,16 @@ export default {
         Header
     },
 
+    beforeCreate() {
+        this.$emit("loading", true);
+    },
+
     methods: {
         getUsers: async function() {
             const usersResponse = await callGet(config.baseUrl + "/users");
             if (usersResponse !== "error") {
                 this.users = usersResponse;
+                this.$emit("loading", false);
             }
         }
     },
