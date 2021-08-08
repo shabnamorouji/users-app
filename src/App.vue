@@ -1,17 +1,17 @@
-<template>
-  <loader v-show="loading" disableScrolling="false" object="#7764ce" color1="#09006a" color2="#1f34f5" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
+@<template>
+  <loader v-show="loading" :disableScrolling="false" object="#7764ce" color1="#09006a" color2="#1f34f5" size="5" speed="2" bg="#343a40" objectbg="#999793" opacity="80" name="circular"></loader>
   <div class="">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link" to="/users-app-live">Users</router-link>
+          <router-link class="nav-link" to="/users-app-live">Author</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/register">Register</router-link>
+          <router-link class="nav-link" to="/users">Users</router-link>
         </li>
         <li class="nav-item">
-          <router-link class="nav-link" to="/author">Author</router-link>
+          <router-link class="nav-link" to="/charts">Charts</router-link>
         </li>
       </ul>
     </div>
@@ -48,7 +48,7 @@ export default {
   }
 }
   body{
-    height: 80px;
+    min-height: 80px;
   }
 
 .main{

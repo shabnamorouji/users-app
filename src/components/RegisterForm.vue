@@ -40,7 +40,8 @@
    
         </div>  
         <button type="submit" class="btn btn-register mb-3 form-element" @click="onSubmit">Register</button>
-    </div>    
+    </div>
+    
 </template>
 <script>
 import Header from "./Header.vue";
@@ -51,17 +52,11 @@ import { useToast } from "vue-toastification";
 export default {
     name: "RegisterForm",
 
+    emits: ["isLoading", "addUser"],
+
     setup() {
       const toast = useToast();
       return { toast }
-    },
-
-    beforeCreate() {
-        this.$emit("loading", true);
-    },
-
-    created() {
-        this.$emit("loading", false);
     },
 
     data: function() {
@@ -86,16 +81,17 @@ export default {
         async onSubmit() {
             
             if (this.validate()) {
-                this.$emit("loading", true);
+                this.$emit("isLoading", true);
                 const user = this.createUser();
                 const usersResponse = await callPost(config.baseUrl + "/users", user);
                 if (usersResponse !== "error") {
+                    this.$emit("addUser", user);
                     this.toast.success("User registered successfully", {
                     timeout: 2000
                 });
                     this.clearForm();
                 }
-                this.$emit("loading", false);
+                this.$emit("isLoading", false);
             }
         },
         clearForm () {
@@ -166,9 +162,9 @@ export default {
     },
 
     components: {
-        Header
-    }
-} 
+        Header,
+    },
+}
 
 
         
@@ -180,6 +176,7 @@ export default {
         background-color: white;
         min-height: 400px;
         padding-left:5px;
+        margin-bottom: 40px;
     }
     
     .form-element{

@@ -22,7 +22,7 @@ export default {
         padding-top: 15px;
         padding-bottom: 15px;
         margin-bottom: 0px;
-        margin-top: 79px;
+        margin-top: 35px;
     }
     @media only screen and (min-width: 900px) {
         .title{
