@@ -11,7 +11,7 @@ export default defineComponent({
       datasets: [
         {
           label: 'GitHub Pull requests',
-          backgroundColor: '#f87979',
+          backgroundColor: '#198754',
           data: [40, 20, 12, 39, 10, 40, 39, 33, 40, 20, 12, 11]
         }
       ]

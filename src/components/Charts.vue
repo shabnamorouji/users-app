@@ -1,9 +1,9 @@
 <template>
-  <Header title="Chart" />
+  <Header title="Bar Chart" />
   <div class="chart1">
       <FirstChart />
   </div>
-  <Header title="Chart" />
+  <Header title="Line Chart" />
   <div class="chart2">
       <SecondChart />
   </div>

@@ -4,7 +4,7 @@
         <div class="row align-items-center">
             <div class="col-sm-6 left-content ">
                 <img src="../assets/profile.jpg" class="rounded-circle profile animate__animated animate__fadeInDown" >
-                <h2 class="animate__animated animate__fadeInDown">I'm Shabnam Oroujizade</h2>
+                <h2 class="myName animate__animated animate__fadeInDown">I'm Shabnam Oroujizade</h2>
             </div>
             <div class="col-sm-6 right-content">
                 <p class="bold-text animate__animated animate__fadeInUpBig">I build beautiful user interfaces with modern technologies.</p>
@@ -96,5 +96,13 @@ import Header from "./Header.vue";
     }
     .contact-icon img {
         width: 32px;
+    }
+    .contact-icon:hover {
+        animation: shakeX;
+        animation-duration: 0.5s;
+    }
+    .myName:hover {
+        animation: shakeX;
+        animation-duration: 0.5s;
     }
 </style>

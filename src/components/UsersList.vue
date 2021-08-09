@@ -74,7 +74,7 @@ export default {
         addUser(user) {
             let users = localStorage.getItem("users");
             users = JSON.parse(users);
-            user.id = users.length + 1;
+            user.id = users[users.length - 1].id + 1;
             users.push(user);
             this.users = users;
             localStorage.setItem("users", JSON.stringify(users));
