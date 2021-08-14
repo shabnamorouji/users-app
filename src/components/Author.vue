@@ -8,16 +8,16 @@
             </div>
             <div class="col-sm-6 right-content">
                 <p class="bold-text animate__animated animate__fadeInUpBig">I build beautiful user interfaces with modern technologies.</p>
-
+        
                 <p class="animate__animated animate__fadeInUpBig">
                     I started my journey with UI/UX design and then I switched to Front-end programming.
                     I started with HTML,CSS, and Javascript then I tried to learn ReactJs to be able to create modern web applications.
                     I found out that VueJs is getting popular and I started to learn Vue too.
-                    This app is developed with Vue framework.
+                    This app is developed with Vue framework. My skills are: HTML, CSS, Javascript, Jquery, ReactJs, VueJs, Rest API
                     Keep in touch with me.
                 </p>
                 <a class="contact-icon animate__animated animate__fadeInUpBig" href="mailto:orouji.work@gmail.com"><img src="../assets/email.png" /></a>
-                <a class="contact-icon animate__animated animate__fadeInUpBig" href="https://instagram.com"><img src="../assets/instagram.png" /></a>
+                <a class="contact-icon animate__animated animate__fadeInUpBig" href="https://instagram.com" target="_blank"><img src="../assets/instagram.png" /></a>
                 <a class="contact-icon animate__animated animate__fadeInUpBig" href="tel:+989106871428"><img src="../assets/phone.png" /></a>
             </div>
         </div>
