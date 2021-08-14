@@ -1,5 +1,9 @@
 <template>
     <!-- <h2 class="title">{{title}}</h2> -->
+        <div class="alert alert-warning">
+            In this page list of the users are fetched from an API and you're able to remove users by clicking on trash icon
+            and on register form you're able to add new users and also data will be sent to API.
+        </div>
         <Header title="Users" />
         <div class="list">
             <table class="table">
@@ -101,6 +105,10 @@ export default {
             margin-right: 300px;
             
         }
+        .alert-warning {
+            margin-left: 300px;
+            margin-right: 300px;
+        }
     }
     
     .table{
@@ -110,5 +118,9 @@ export default {
         width: 25px;
         height: 25px;
         cursor: pointer;
+    }
+
+    .alert-warning {
+        margin-top: 10px;
     }
 </style>
