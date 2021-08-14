@@ -92,7 +92,7 @@ export default {
     }
 }
 </script>
-<style >
+<style scoped>
     .list{
         background-color: white;
         min-height: 400px;

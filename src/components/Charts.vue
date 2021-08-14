@@ -1,4 +1,9 @@
 <template>
+  <div class="alert alert-warning">
+      In this page data has been visualized with charts.
+      Two charts are used here: Bar chart and Line chart.
+      This data can be given throgh API.
+  </div>
   <Header title="Bar Chart" />
   <div class="chart1">
       <FirstChart />
@@ -46,6 +51,10 @@ export default {
              margin-left: 200px !important;
             margin-right: 200px !important;
         }
+        .alert-warning {
+            margin-left: 200px;
+            margin-right: 200px;
+        }
     }
     .chart1{
         font-size: 18px;
@@ -71,6 +80,10 @@ export default {
         margin-bottom: 50px;
         /* padding: 0px 10px; */
 
+    }
+
+    .alert-warning {
+        margin-top: 10px;
     }
 
 </style>
